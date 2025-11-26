@@ -1,0 +1,131 @@
+/*
+ * CODE CSS FINAL : Titres et Boules de la MÊME COULEUR (Bleu Marine)
+ */
+
+.formation-main-block {
+    width: 100%;
+    margin-bottom: 30px; 
+    padding: 0 10px; 
+}
+
+/* --- Ligne de temps (la barre verticale) --- */
+.timeline-compact {
+    border-left: 1px solid #e0e0e0; 
+    position: relative;
+    padding-left: 25px; 
+    margin-top: 20px;
+    margin-left: 10px; 
+}
+
+.timeline-compact::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.timeline-item-compact {
+    margin-bottom: 30px; 
+    display: flex; 
+    position: relative;
+    left: 0;
+    width: 100%;
+}
+
+/* --- Marqueur (Conteneur du Cercle) --- */
+.timeline-marker {
+    position: relative;
+    width: 25px; 
+    flex-shrink: 0; 
+    z-index: 2;
+    height: 1.5em; 
+}
+
+/* --- Le Point (Cercle Plein et Centré) --- */
+.timeline-marker::before {
+    content: "";
+    position: absolute;
+    left: -5px; 
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px; 
+    height: 10px;
+    
+    /* COULEUR COMMUNE : BLEU MARINE */
+    background: #003366; 
+    border: none;
+    border-radius: 50%;
+    z-index: 3; 
+}
+
+
+/* --- Contenu de l'élément de la ligne de temps --- */
+.timeline-content-compact {
+    background: #fff;
+    padding: 0 0 0 10px; 
+    margin-top: 0; 
+    flex-grow: 1; 
+}
+
+/* --- Styles de Titres (COULEUR UNIFIÉE) --- */
+
+.timeline-title-compact {
+    /* Le titre utilise la MÊME COULEUR que les boules */
+    font-size: 1.05rem;
+    font-weight: 800; 
+    color: #003366; 
+    margin: 0 0 3px 0;
+    text-transform: none; 
+    letter-spacing: 0; 
+}
+
+.timeline-year-compact {
+    /* L'année/Période en couleur neutre (gris foncé) */
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #555; 
+    margin: 0 0 5px 0;
+}
+
+.timeline-ecole-compact {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: #6c757d; 
+    margin: 0 0 15px 0;
+    font-style: italic; 
+}
+
+
+/* --- Liste des détails (Inchangé) --- */
+.timeline-details-list-compact {
+    padding-left: 15px; 
+    margin: 0;
+    color: #555;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    list-style-type: disc;
+    list-style-position: outside;
+}
+
+.timeline-details-list-compact li {
+    margin-bottom: 8px;
+}
+
+
+/* --- Responsiveness --- */
+@media (max-width: 768px) {
+    .timeline-compact {
+        margin-left: 5px; 
+    }
+
+    .timeline-marker {
+        width: 15px;
+    }
+
+    .timeline-marker::before {
+        left: -5px;
+    }
+
+    .timeline-content-compact {
+        padding-left: 5px;
+    }
+}

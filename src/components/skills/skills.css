@@ -1,0 +1,162 @@
+/*
+ * CODE CSS COMPLET ET CORRIGÉ : Styles finaux pour la section Compétences
+ */
+
+.skills-main-block {
+    width: 100%;
+    margin-bottom: 30px; 
+    padding: 0 10px; 
+}
+
+/* --- Styles des Sous-Titres (Attractifs) --- */
+.skills-sub-title {
+    /* Style d'encadré pour attirer l'œil */
+    background-color: #eaf3ff; /* Bleu très clair */
+    color: #004d99; /* Bleu foncé pour le texte */
+    
+    font-size: 1.1em;
+    font-weight: bold;
+    
+    padding: 8px 15px; /* Padding intérieur */
+    border-radius: 6px; /* Coins légèrement arrondis */
+    
+    margin-top: 25px; /* Espace au-dessus */
+    margin-bottom: 15px; /* Espace en dessous */
+    
+    display: block; /* S'assure qu'il prend toute la largeur disponible */
+    border-left: 4px solid #007bff; /* Barre latérale bleue pour l'accentuation */
+    
+    /* Nettoyage */
+    padding-bottom: 0;
+    border-bottom: none; 
+}
+
+.skills-sub-title:first-of-type {
+    margin-top: 15px; /* Moins de marge pour le premier sous-titre après le titre principal */
+}
+
+/* --- 1. Compétences Techniques (Grille de Barres avec Cadres) --- */
+.technical-skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px 30px; 
+    margin-bottom: 20px;
+}
+
+/* 🧱 STYLE DU CADRE ET HOVER EFFECT (Compétences Techniques) 🧱 */
+.skill-item-compact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px; 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+}
+
+.skill-item-compact:hover {
+    border-color: #007bff; 
+    background-color: #f7faff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); 
+}
+
+.skill-name-compact {
+    font-weight: 800;
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 5px;
+}
+
+/* Styles des Barres de Progression (Uniformisation pour Compétences et Langues) */
+.progress-bar-compact {
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    width: 100%;
+    height: 8px; 
+    overflow: hidden;
+}
+
+.progress-compact {
+    height: 100%;
+    background-color: #0077b6; 
+    border-radius: 5px;
+    transition: width 0.5s ease-out;
+}
+
+/* --- 2. Qualités Personnelles (Tags) --- */
+.soft-skills-tags-compact {
+    margin-top: 5px; 
+    margin-bottom: 30px;
+}
+
+.soft-skill-tag {
+    display: inline-block;
+    color: #444;
+    padding: 0.4rem 0.8rem;
+    margin: 0 0.5rem 0.5rem 0; 
+    border: 1px solid #ccc;
+    border-radius: 20px; 
+    background-color: #f0f4f8;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: default;
+}
+
+/* --- 3. Langues (Grille avec Cadres et Barres de progression) --- */
+.language-list-compact {
+    margin-top: 5px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    /* Espace augmenté entre les cartes de langue */
+    gap: 20px 40px;
+}
+
+/* 🧱 STYLE DU CADRE ET HOVER EFFECT (Langues) 🧱 */
+.language-item-compact {
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 15px; 
+    transition: all 0.3s ease; 
+    cursor: pointer; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); 
+    
+    width: 100%; 
+    max-width: none;
+}
+
+.language-item-compact:hover {
+    border-color: #007bff; 
+    background-color: #f7faff; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transform: translateY(-2px); 
+}
+
+.language-name-compact {
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 800;
+    margin-bottom: 5px; 
+}
+
+/* Ajustement pour la barre de progression dans le bloc Langues */
+.progress-bar-lang {
+    margin-bottom: 0; 
+}
+
+
+/* --- Médias Queries (Réactivité) --- */
+@media (max-width: 768px) {
+    .technical-skills-grid, .language-list-compact {
+        grid-template-columns: 1fr; 
+        gap: 15px; 
+    }
+}

@@ -1,0 +1,94 @@
+/*
+ * CODE CSS FINAL : Titre de Section Unifié et Mise en Page Améliorée pour Contact
+ */
+
+.contact-infos {
+    display: flex;
+    flex-direction: column;
+    padding: 10px; /* Ajout d'un padding pour un meilleur espacement */
+}
+
+/* --- Amélioration du Titre (Souligné comme les autres sections) --- */
+.contact-infos h2 {
+    font-size: 1.5rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block; 
+    position: relative;
+    padding-bottom: 5px; 
+}
+
+/* Ligne de soulignement bleue pour le titre */
+.contact-infos h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%; 
+    height: 3px; 
+    background-color: #007bff; /* Bleu standard */
+}
+/* ----------------------------------------------------------------- */
+
+.contact-infos p {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+    line-height: 1.4;
+}
+
+.contact-info {
+    display: flex;
+    align-items: center; /* Aligner verticalement key et value */
+    margin-bottom: 10px;
+}
+
+.key {
+    display: flex;
+    align-items: center;
+    color: #333; /* Rendre le nom de la clé plus sombre */
+    font-weight: 600;
+    margin-right: 15px; /* Espace après la clé */
+    flex-shrink: 0; /* Empêche le key de rétrécir */
+}
+
+.key span {
+    font-size: 1rem;
+}
+
+.key img {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+/* Retrait du deux-points (:) pour un look plus moderne */
+.key:after {
+    content: ""; 
+    margin: 0;
+}
+
+/* Style des liens de contact */
+.contact-info a {
+    font-size: 1rem;
+    color: #003366; /* Bleu Marine (plus sombre pour la lisibilité) */
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 400; /* Moins gras que la clé */
+    flex-grow: 1; /* Permet au lien de prendre l'espace restant */
+    word-break: break-all; /* Assure que le lien ne déborde pas */
+}
+
+.contact-info a:hover {
+    color: #007bff; /* Bleu clair à l'interaction */
+    cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contact-infos {
+        width: 100%;
+        margin: 0 0.5rem 0 0.5rem;
+        border-radius: 2px;
+    }
+}

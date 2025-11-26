@@ -1,0 +1,21 @@
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+footer .contact-logos {
+    margin-top: 10px;
+}
+
+footer .contact-logos a {
+    margin: 0 15px;
+    display: inline-block;
+}
+
+footer .contact-logos img {
+    width: 30px;
+    height: auto;
+}
