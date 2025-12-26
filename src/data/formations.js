@@ -1,8 +1,8 @@
 export const formations = [
     {
-        annee: "2025 - 2026",
-        titre: "Futur étudiant apprenti ingénieur",
-        ecole: "Ecoles ciblées:",
+        annee: "2026 - 2029",
+        titre: "Admission encore dans une grande école d'ingénieurs",
+        ecole: "Ecoles ciblées: IMT, Télécom SudParis, CYTech, ISEN JUNIA, ESIEA... ",
         details: ["Durant mes deux années en CPGE MP2I/MPI au Lycée Colbert de Tourcoing, j’ai suivi une formation exigeante combinant mathématiques, physique et informatique. Cette préparation intensive m’a permis de renforcer ma rigueur scientifique, ma capacité d’analyse et ma méthodologie dans la résolution de problèmes complexes. J’y ai approfondi mes connaissances en algèbre, analyse, géométrie, mécanique et électromagnétisme, tout en développant des compétences avancées en programmation, algorithmique et structures de données. Ces années m’ont également appris à gérer la charge de travail importante, à travailler efficacement en autonomie et en équipe, et à aborder les défis intellectuels avec persévérance et curiosité."]
     },
     {

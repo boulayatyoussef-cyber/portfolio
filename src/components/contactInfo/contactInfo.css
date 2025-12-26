@@ -1,94 +1,95 @@
-/*
- * CODE CSS FINAL : Titre de Section Unifié et Mise en Page Améliorée pour Contact
- */
+.contact-section {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
 
-.contact-infos {
+.contact-outer-wrapper {
+    background: #111111;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 40px 30px;
+    text-align: center;
+}
+
+.main-glow:hover {
+    box-shadow: 0 0 30px rgba(0, 122, 255, 0.15);
+    transition: 0.4s ease;
+}
+
+.contact-info-list {
     display: flex;
     flex-direction: column;
-    padding: 10px; /* Ajout d'un padding pour un meilleur espacement */
+    gap: 20px;
+    align-items: center;
+    margin-top: 30px;
 }
 
-/* --- Amélioration du Titre (Souligné comme les autres sections) --- */
-.contact-infos h2 {
-    font-size: 1.5rem;
-    color: #000000;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-    display: block; 
-    position: relative;
-    padding-bottom: 5px; 
-}
-
-/* Ligne de soulignement bleue pour le titre */
-.contact-infos h2::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%; 
-    height: 3px; 
-    background-color: #007bff; /* Bleu standard */
-}
-/* ----------------------------------------------------------------- */
-
-.contact-infos p {
-    font-size: 0.95rem;
-    color: #555;
-    margin-bottom: 1.5rem;
-    line-height: 1.4;
-}
-
-.contact-info {
-    display: flex;
-    align-items: center; /* Aligner verticalement key et value */
-    margin-bottom: 10px;
-}
-
-.key {
+.contact-item-card {
     display: flex;
     align-items: center;
-    color: #333; /* Rendre le nom de la clé plus sombre */
-    font-weight: 600;
-    margin-right: 15px; /* Espace après la clé */
-    flex-shrink: 0; /* Empêche le key de rétrécir */
+    gap: 20px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 15px 25px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 550px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: 0.3s ease;
 }
 
-.key span {
-    font-size: 1rem;
+.contact-item-card:hover {
+    background: rgba(0, 122, 255, 0.05);
+    border-color: rgba(0, 122, 255, 0.3);
 }
 
-.key img {
-    margin-right: 8px;
-    vertical-align: middle;
+.contact-icon-wrapper {
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff; /* Fond blanc pour les logos Gmail/LinkedIn/Github */
+    border-radius: 10px;
+    padding: 8px;
+    flex-shrink: 0;
 }
 
-/* Retrait du deux-points (:) pour un look plus moderne */
-.key:after {
-    content: ""; 
-    margin: 0;
+.contact-icon-img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Style des liens de contact */
-.contact-info a {
-    font-size: 1rem;
-    color: #003366; /* Bleu Marine (plus sombre pour la lisibilité) */
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Titre encadré identique à la section compétences */
+.category-frame-contact {
+    display: inline-block;
+    border: 1px solid rgba(0, 122, 255, 0.4);
+    color: #ffffff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 5px;
+    margin-bottom: 6px;
+    text-transform: uppercase;
+    background: rgba(0, 122, 255, 0.1);
+}
+
+/* Valeur avec lueur bleue au survol */
+.contact-value-glow {
+    color: #007AFF;
     text-decoration: none;
-    transition: color 0.3s;
-    font-weight: 400; /* Moins gras que la clé */
-    flex-grow: 1; /* Permet au lien de prendre l'espace restant */
-    word-break: break-all; /* Assure que le lien ne déborde pas */
+    font-size: 1.1rem;
+    font-weight: 600;
 }
 
-.contact-info a:hover {
-    color: #007bff; /* Bleu clair à l'interaction */
-    cursor: pointer;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .contact-infos {
-        width: 100%;
-        margin: 0 0.5rem 0 0.5rem;
-        border-radius: 2px;
-    }
+.contact-value-glow:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(0, 122, 255, 0.8);
 }

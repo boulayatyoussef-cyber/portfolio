@@ -1,20 +1,80 @@
-.section2-container {
+/* Correction de l'alignement vertical */
+.category-block {
     display: flex;
-    padding: 2rem;
-    gap: 6rem;
+    flex-direction: column; /* Force le titre encadré au-dessus du contenu */
+    align-items: flex-start;
+    width: 100%;
+    margin-top: 30px;
 }
 
-@media (max-width: 1024px) {
-
-    .section2-container {
-        display: flex;
-        gap: 0;
-    }
+.category-frame {
+    border: 1px solid rgba(0, 122, 255, 0.4);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 5px 12px;
+    border-radius: 6px;
+    margin-bottom: 15px; /* Espace sous le cadre */
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    background: rgba(0, 122, 255, 0.1);
 }
 
-@media (max-width: 768px) {
-    .section2-container {
-        flex-direction: column;
-        justify-content: flex-start;
-    }
+/* Effets de lueur et Néon */
+.main-glow:hover {
+    box-shadow: 0 0 40px rgba(0, 122, 255, 0.15);
+}
+
+.skills-grid-compact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+}
+
+.skill-card-glow {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 15px;
+    transition: 0.3s;
+}
+
+.skill-card-glow:hover {
+    transform: translateY(-3px);
+    border-color: rgba(0, 122, 255, 0.5);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.progress-container-dark {
+    background: rgba(255, 255, 255, 0.1);
+    height: 6px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 122, 255, 0.5); /* Effet Glow sur la barre */
+}
+
+.quality-pill-neon {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 8px 18px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.quality-pill-neon:hover {
+    background: #007AFF;
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.6); /* Effet Néon */
+    transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+    .skills-grid-compact { grid-template-columns: 1fr; }
 }

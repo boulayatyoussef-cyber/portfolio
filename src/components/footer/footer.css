@@ -1,21 +1,44 @@
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 2rem 0;
-    text-align: center;
-    width: 100%;
+.main-footer {
+    max-width: 1200px;
+    margin: 80px auto 40px;
+    padding: 0 20px;
 }
 
-footer .contact-logos {
-    margin-top: 10px;
+.footer-content {
+    /* Ligne de séparation fine au-dessus du footer */
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-footer .contact-logos a {
-    margin: 0 15px;
-    display: inline-block;
+.copyright {
+    color: #666;
+    font-size: 0.85rem;
 }
 
-footer .contact-logos img {
-    width: 30px;
-    height: auto;
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-link {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #007AFF; /* Ton bleu signature au survol */
+}
+
+/* Adaptation pour mobile */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
 }

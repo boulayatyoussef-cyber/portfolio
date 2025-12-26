@@ -1,123 +1,109 @@
-/*
- * NOUVEAU STYLE POUR LE TITRE DE SECTION PROJETS
- * La ligne s'étend sur toute la largeur (width: 100%)
- */
-
-.projets h2 {
-    /* Style du texte du titre */
-    font-size: 1.5rem; 
-    color: #000000;
-    font-weight: 700; 
-    margin-bottom: 0.5rem; 
-    
-    /* IMPORTANT : Assure que le h2 prend toute la largeur */
-    display: block; 
-    position: relative;
-    padding-bottom: 5px; 
+.main-projects-container {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
-.projets h2::after {
+.projects-outer-wrapper {
+    background: #111111; /* Fond gris sombre */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    padding: 45px;
+}
+
+/* STYLE DU TITRE SOULIGNÉ */
+.section-main-title {
+    color: #fff;
+    font-size: 1.6rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+.section-main-title::after {
     content: '';
     position: absolute;
     bottom: 0;
     left: 0;
-    
-    /* CORRECTION : La ligne prend 100% de la largeur du h2 */
-    width: 100%; 
-    height: 3px; 
-    background-color: #007bff; /* Bleu standard de votre charte graphique */
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #007AFF, #4ade80); /* Dégradé bleu-vert */
+    border-radius: 2px;
 }
 
-/* Le reste de votre CSS pour les cartes de projets (inchangé) */
+.projects-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Deux colonnes */
+    gap: 25px;
+}
 
-.projets-grid {
+.project-card-minimal {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.project-card-minimal:hover {
+    border-color: #ffffff; /* Bordure blanche au survol */
+    transform: translateY(-5px);
+}
+
+.project-info h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    color: #999;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    max-width: 85%;
+}
+
+/* BADGES DE TECHNOLOGIES */
+.project-tags {
     display: flex;
     flex-wrap: wrap;
+    gap: 8px;
 }
 
-.projet-card {
-    background: #f9f9f9;
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin: 0.5rem 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    width: 450px;
-}
-
-.projet-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    background-color: #f1faff;
-}
-
-.projet-card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.8rem;
-    color: #333;
-}
-
-.projet-card p {
-    font-size: 0.9rem;
-    color: #333333;
-    margin-bottom: 1rem;
-}
-
-.technologies {
-    margin-bottom: 1rem;
-}
-
-.tech-tag {
-    display: inline-block;
+.tag-pill {
     background: #0077b6;
     color: #fff;
-    padding: 0.3rem 0.8rem;
-    margin: 0.2rem;
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.85rem;
-    transition: background 0.3s ease;
+    font-size: 0.75rem;
+    font-weight: 600;
 }
 
-.tech-tag:hover {
-    background: #0096c7;
-}
-
-.project-details {
-    display: inline-block;
-    text-decoration: none;
-    color: #ffffff;
-    padding: 0.6rem 1rem;
+/* BOUTON À DROITE */
+.project-action-btn {
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+    padding: 10px 20px;
     border-radius: 8px;
-    font-size: 0.88rem;
-    transition: background 0.3s ease, transform 0.2s ease;
-    background-color: #000000;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
 }
 
-.project-details:hover {
-    color: #ffffff;
-    transform: scale(1.05);
+.project-action-btn:hover {
+    background: #ffffff;
+    color: #000;
 }
 
-@media (max-width: 1024px) {
-    .projets h2 {
-        font-size: 2rem;
-    }
-
-    .projet-card {
-        padding: 1.2rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .projets-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .projet-card {
-        padding: 1.2rem;
-    }
-
-    .projets h2 {
-        font-size: 1.8rem;
-    }
+@media (max-width: 950px) {
+    .projects-grid-layout { grid-template-columns: 1fr; }
 }

@@ -1,104 +1,47 @@
-/*
- * CODE CSS COMPLET (Photo centrée dans la colonne de gauche)
- */
+.section-profile {
+    display: flex;
+    flex-direction: column; /* Aligne verticalement : Photo puis Texte */
+    align-items: center;    /* Centre horizontalement tous les éléments */
+    text-align: center;
+    background: #111111;    /* Cadre gris moins foncé */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 24px;
+    margin: 140px auto 40px; /* 140px pour bien descendre sous le header */
+    padding: 50px;
+    max-width: 900px;
+    width: 90%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
 
-.cv-container {
-    display: flex; 
-    max-width: 1000px; 
-    margin: 0 auto; 
-    background-color: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    border-radius: 8px; 
+.profile-img-container {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid #007AFF; /* Cercle bleu signature */
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    margin-bottom: 25px;
+    box-shadow: 0 0 20px rgba(0, 122, 255, 0.3);
 }
 
-/* --- Colonne de Gauche (Photo et Infos - 35%) --- */
-.left-column {
-    width: 35%; 
-    padding: 30px; /* Padding uniforme pour faciliter le centrage */
-    background-color: #ffffff; 
-    border-right: 1px solid #eee; 
-    display: flex;
-    flex-direction: column;
-    /* CLÉ DU CENTRAGE HORIZONTAL */
-    align-items: center; 
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.profile-photo {
-    width: 150px; 
-    height: 150px;
-    border-radius: 4px; 
-    object-fit: cover; 
-    margin-bottom: 20px;
-    border: none; 
+.profile-info h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    margin-bottom: 10px;
 }
 
-.contact-info {
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    /* Permet aux blocs d'information de ne pas s'étendre sur toute la largeur */
-    width: 100%; 
-    /* Réaligne le texte à gauche malgré l'alignement centré du parent */
-    text-align: left; 
-}
-
-.contact-info p {
-    margin: 5px 0; 
-    font-size: 0.95em;
-    color: #333;
-    line-height: 1.4;
-}
-
-.contact-info strong {
-    /* S'assurer que les étiquettes (Name:, Profile:) sont mises en gras */
-    font-weight: bold;
-    /* Peut nécessiter un ajustement si vous voulez l'alignement de Mohamed */
-    margin-right: 5px; 
-}
-
-/* --- Colonne de Droite (Texte principal - 65%) --- */
-.right-column {
-    width: 65%; 
-    padding: 30px 30px 30px 20px; 
-}
-
-/* Style pour le paragraphe de description */
-.about-content { 
-    font-size: 1em;
-    text-align: justify;
-    color: #444; 
-    line-height: 1.6; 
-    margin-bottom: 15px;
-}
-
-/* --- Titre de section (About me) --- */
-.about-title {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #333;
-    margin-top: 0; 
-    margin-bottom: 15px;
-    padding-bottom: 5px;
-    border-bottom: 3px solid #007bff; 
-    display: inline-block; 
-}
-
-/* --- Médias Queries (Réactivité) --- */
-@media (max-width: 768px) {
-    .cv-container {
-        flex-direction: column; 
-    }
-    .left-column, .right-column {
-        width: 100%;
-        border-right: none;
-        padding: 20px;
-        /* Centre les éléments sur mobile */
-        align-items: center;
-    }
-    .contact-info {
-        /* Centrage du bloc sur mobile */
-        text-align: center; 
-    }
+.availability-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #4ade80;
+    background: rgba(74, 222, 128, 0.1);
+    padding: 6px 15px;
+    border-radius: 20px;
+    margin-top: 10px;
 }

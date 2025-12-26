@@ -1,117 +1,52 @@
-.menu {
+.main-header {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    background-color: #000000;
-    border-bottom: 1px solid #e5e5e5;
-    padding: 1rem;
-    transition: transform 0.3s ease-in-out;
+    width: 100%;
     z-index: 1000;
-    height: 3rem;
-    align-content: center;
+    background: rgba(0, 0, 0, 0.8); /* Effet de transparence */
+    backdrop-filter: blur(10px);    /* Flou derrière la barre */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.menu img {
-    display: none;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
     display: flex;
+    justify-content: space-between; /* Logo à gauche, liens à droite */
     align-items: center;
-    justify-content: center;
 }
 
-.menu li {
-    margin: 0;
-}
-
-.menu a {
-    padding: 1rem 0;
-    margin: 0 1rem;
-    font-size: 0.85rem;
-    font-weight: 500;
-    text-decoration: none;
-    color: #ffffff;
-    position: relative;
-    display: inline-block;
-}
-
-.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: #ffffff;
-}
-
-.menu a::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: #ffffff;
-    transition: width 0.3s ease-out;
-}
-
-.menu a:hover {
-    color: #ffffff;
-}
-
-.menu a:hover::after {
-    width: 100%;
-}
-
-/* Active state */
-.active a {
+.logo {
     color: #fff;
-    font-weight: 600;
-    border-bottom: 1px solid #ffffff;
+    font-weight: 800;
+    font-size: 1.2rem;
 }
 
-.menu a:not(.active):hover::after {
-    width: 100%;
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 40px; /* Espace entre les liens */
+    margin: 0;
+    padding: 0;
 }
 
+.nav-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff; /* Le lien devient blanc au survol */
+}
+
+/* Version Mobile */
 @media (max-width: 768px) {
-    .menu {
-        display: flex;
-        height: auto;
-        top: 0;
-        left: 0;
-        border-right: none;
-        gap: 30%;
-    }
-
-    .menu ul {
-        display: none;
-        flex-direction: column;
-        align-items: start;
-    }
-
-    .menu li {
-        padding: 0;
-    }
-
-    .menu img {
-        display: block;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-    }
-
-    .menu a {
-        padding: 1rem 0;
-    }
-
-    .show-menu-mobile {
-        display: flex !important;
+    .nav-links {
+        gap: 15px;
+        font-size: 0.8rem;
     }
 }
